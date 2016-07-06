@@ -21,15 +21,11 @@ application app_path do
   end
 
   ruby '2'
-  ruby_gem 'rake'
 
-  bundle_install "#{app_path}/Gemfile" do
-    binstubs
-    without ["test"]
-  end
+  bundle_install
 
-  ruby_execute "bundle exec rake save_price_list[./spec/resources/]" do
-    environment "DATABASE_URL" => "mongodb://127.0.0.1:27017/aws-price-list"
+  ruby_execute "rake save_price_list[./spec/resources/]" do
+    environment "DATABASE_URL" => "mongodb://127.0.0.1/aws-price-list"
   end
 
 end
