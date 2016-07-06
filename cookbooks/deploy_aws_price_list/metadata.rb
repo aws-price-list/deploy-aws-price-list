@@ -7,3 +7,4 @@ long_description 'Installs/Configures deploy_aws_price_list'
 version '0.1.0'
 
 depends 'mongodb'
+depends 'application_ruby'

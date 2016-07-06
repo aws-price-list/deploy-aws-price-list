@@ -16,5 +16,6 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[deploy_aws_price_list::default]
+      - recipe[deploy_aws_price_list::install_mongodb]
+      - recipe[deploy_aws_price_list::save-aws-price-list]
     attributes:
