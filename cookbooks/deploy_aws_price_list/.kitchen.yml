@@ -18,4 +18,5 @@ suites:
     run_list:
       - recipe[deploy_aws_price_list::install_mongodb]
       - recipe[deploy_aws_price_list::save-aws-price-list]
+      - recipe[deploy_aws_price_list::get-aws-price-list]
     attributes:
